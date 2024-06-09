@@ -1,0 +1,81 @@
+//this is my Prisma schema file
+// npm install prisma, npx prisma init and npm prisma db push
+
+
+generator client {
+  provider = "prisma-client-js"
+} // Configuration du générateur Prisma Client.
+
+datasource db {
+  provider = "mongodb" // Spécifie que MongoDB sera utilisé comme source de données.
+  url      = env("DATABASE_URL")// URL de la base de données, lue depuis les variables d'environnement.
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String?
+  email String? @unique
+  emailVerified DateTime?
+  image String? // URL de l'image de profil de l'utilisateur
+  hashedPassword String?
+  createdAt DateTime @default(now())
+  updated DateTime @updatedAt
+  favoriteIds String[] @db.ObjectId
+
+  accounts Account [] // un utilisateur peut avoir plusieurs comptes.
+  listings Listing[]//un utilisateur peut avoir plusieurs annonces.
+  reservations Reservation[]// un utilisateur peut avoir plusieurs réservations.
+
+}
+
+model Account{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId
+  type String
+  provider String // Nom du fournisseur de service (Google)
+  providerAccountId String // Identifiant du compte chez le fournisseur de service.
+  refresh_token String? @db.String
+  access_token String @db.String
+  expires_at Int?
+  token_type String?
+  scope String?
+  id_token String? @db.String
+  session_state String?
+
+  user User @relation(fields: [userId], references: [id], onDelete:Cascade)
+  @@unique([provider,providerAccountId])
+}
+
+model Listing{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  description String
+  imageSrc String
+  createdAt DateTime @default(now())
+  category String
+  roomCount Int
+  bathroomCount Int
+  guestCount Int
+  locationValue String
+  userId String @db.ObjectId // Identifiant de l'utilisateur ayant créé l'annonce.
+  price Int
+
+  user User @relation(fields: [userId] ,references: [id], onDelete:Cascade)
+ reservations Reservation[] //une annonce peut avoir plusieurs réservations.
+}
+
+model Reservation {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId // Identifiant de l'utilisateur ayant effectué la réservation.
+  listingId String @db.ObjectId
+  startDate DateTime
+  endDate DateTime
+  totalPrice Int
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete:Cascade)
+  listing Listing @relation(fields: [listingId], references: [id], onDelete:Cascade)
+}
+ // chaque réservation (Reservation) est liée à un utilisateur (User).
+ // Si l'utilisateur (User) auquel cette réservation est liée est supprimé, la réservation (Reservation) sera également supprimée automatiquement.
+
