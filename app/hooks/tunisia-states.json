@@ -1,0 +1,146 @@
+[
+    {
+      "value": "TN-11",
+      "label": "Tunis",
+      "latlng": [36.8008, 10.18],
+      "region": "Tunis"
+    },
+    {
+      "value": "TN-12",
+      "label": "Ariana",
+      "latlng": [36.8668, 10.1659],
+      "region": "Tunis"
+    },
+    {
+      "value": "TN-13",
+      "label": "Ben Arous",
+      "latlng": [36.7435, 10.232],
+      "region": "Tunis"
+    },
+    {
+      "value": "TN-14",
+      "label": "La Manouba",
+      "latlng": [36.8106, 10.0956],
+      "region": "Tunis"
+    },
+    {
+      "value": "TN-21",
+      "label": "Nabeul",
+      "latlng": [36.451, 10.7353],
+      "region": "Nabeul"
+    },
+    {
+      "value": "TN-22",
+      "label": "Zaghouan",
+      "latlng": [36.4021, 10.1429],
+      "region": "Zaghouan"
+    },
+    {
+      "value": "TN-23",
+      "label": "Bizerte",
+      "latlng": [37.2746, 9.8739],
+      "region": "Bizerte"
+    },
+    {
+      "value": "TN-31",
+      "label": "Béja",
+      "latlng": [36.7256, 9.1817],
+      "region": "Béja"
+    },
+    {
+      "value": "TN-32",
+      "label": "Jendouba",
+      "latlng": [36.5011, 8.7802],
+      "region": "Jendouba"
+    },
+    {
+      "value": "TN-33",
+      "label": "Kef",
+      "latlng": [36.1742, 8.7049],
+      "region": "Kef"
+    },
+    {
+      "value": "TN-34",
+      "label": "Siliana",
+      "latlng": [36.088, 9.3708],
+      "region": "Siliana"
+    },
+    {
+      "value": "TN-41",
+      "label": "Kairouan",
+      "latlng": [35.6744, 10.1013],
+      "region": "Kairouan"
+    },
+    {
+      "value": "TN-42",
+      "label": "Kasserine",
+      "latlng": [35.1676, 8.8365],
+      "region": "Kasserine"
+    },
+    {
+      "value": "TN-43",
+      "label": "Sidi Bouzid",
+      "latlng": [35.0382, 9.4846],
+      "region": "Sidi Bouzid"
+    },
+    {
+      "value": "TN-51",
+      "label": "Sousse",
+      "latlng": [35.8256, 10.636],
+      "region": "Sousse"
+    },
+    {
+      "value": "TN-52",
+      "label": "Monastir",
+      "latlng": [35.777, 10.8262],
+      "region": "Monastir"
+    },
+    {
+      "value": "TN-53",
+      "label": "Mahdia",
+      "latlng": [35.5047, 11.0622],
+      "region": "Mahdia"
+    },
+    {
+      "value": "TN-61",
+      "label": "Sfax",
+      "latlng": [34.7428, 10.7603],
+      "region": "Sfax"
+    },
+    {
+      "value": "TN-71",
+      "label": "Gafsa",
+      "latlng": [34.425, 8.7842],
+      "region": "Gafsa"
+    },
+    {
+      "value": "TN-72",
+      "label": "Tozeur",
+      "latlng": [33.9197, 8.1335],
+      "region": "Tozeur"
+    },
+    {
+      "value": "TN-73",
+      "label": "Kebili",
+      "latlng": [33.7044, 8.9731],
+      "region": "Kebili"
+    },
+    {
+      "value": "TN-81",
+      "label": "Gabès",
+      "latlng": [33.8815, 10.0982],
+      "region": "Gabès"
+    },
+    {
+      "value": "TN-82",
+      "label": "Medenine",
+      "latlng": [33.3541, 10.5055],
+      "region": "Medenine"
+    },
+    {
+      "value": "TN-83",
+      "label": "Tataouine",
+      "latlng": [32.9296, 10.4518],
+      "region": "Tataouine"
+    }
+  ]
